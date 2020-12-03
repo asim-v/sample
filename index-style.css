@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+body {
+  font-family: "San Francisco";
+}
+
+.container {
+  margin: 0 auto;
+  width: 414px;
+  height: 896px;
+}
+
+.phone {
+  background: #4151db;
+  width: 414px;
+  height: 896px;
+  padding: 8.96px;
+  display: block;
+  border-radius: 59.6736px;
+  overflow: hidden;
+  box-shadow: inset 0 0 4.48px 4.48px rgba(15, 15, 15, 0.3), 0px 0 35.84px 26.88px rgba(255, 255, 255, 0.3) inset;
+}
+.phone .screen-notch {
+  position: absolute;
+  z-index: 6;
+  margin-left: 103.5px;
+  width: 207px;
+  height: 31.8461538462px;
+  background: black;
+  display: block;
+  border-bottom-right-radius: 13.44px;
+  border-bottom-left-radius: 13.44px;
+  text-align: center;
+}
+.phone .screen-notch .speaker {
+  display: inline-block;
+  background: #262626;
+  height: 8.96px;
+  width: 44.8px;
+  border-radius: 4.48px;
+}
+.phone .screen-notch .camera {
+  display: inline-block;
+  border-radius: 100%;
+  height: 13.44px;
+  width: 13.44px;
+  background: #1d1a52;
+}
+.phone .loader {
+  width: 396.08px;
+  height: 878.08px;
+  display: block;
+  border-radius: 41.7536px;
+  overflow: hidden;
+  opacity: 1;
+  position: absolute;
+  z-index: 3;
+  animation: background-motion 4s both;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+.phone .loader i {
+  animation: apple-icon 4s both;
+  position: absolute;
+  top: 412.16px;
+  left: 171.16px;
+  font-size: 89.6px;
+}
+.phone .screen {
+  background: black;
+  width: 396.08px;
+  height: 878.08px;
+  padding: 8.96px;
+  position: relative;
+  display: block;
+  border-radius: 55.1936px;
+  overflow: hidden;
+}
+.phone .screen-image {
+  width: 396.08px;
+  height: 878.08px;
+  display: block;
+  border-radius: 53.76px;
+  position: relative;
+  overflow: hidden;
+}
+.phone .screen-image .action-bar {
+  width: 207px;
+  left: 103.5px;
+  height: 4.48px;
+  border-radius: 8.96px;
+  bottom: 17.92px;
+  background: #262626;
+  opacity: 0.4;
+  display: block;
+  position: absolute;
+  z-index: 2;
+}
+.phone .screen.has-browser .icons {
+  top: 15px;
+  right: 10px;
+  position: absolute;
+  padding: 0 20px;
+  color: white;
+  font-size: 12px;
+}
+.phone .screen.has-browser .icons i {
+  margin-right: 3px;
+}
+.phone .screen.has-browser .icons i .fa-signal {
+  font-size: 10px;
+}
+.phone .screen.has-browser .address-bar-container {
+  width: 360.24px;
+  background: #353739;
+  padding: 44.8px 17.92px 17.92px;
+}
+.phone .screen.has-browser .address-bar-container i {
+  font-size: 17.92px;
+  display: inline-block;
+}
+.phone .screen.has-browser .address-bar-container .address-bar {
+  display: block;
+  background: #5f6367;
+  border-radius: 44.8px;
+  height: 31.36px;
+  color: #bcc0c4;
+  text-align: center;
+  font-size: 22.4px;
+  padding-top: 4.48px;
+}
+
+.screen iframe {
+  width: 411.08px;
+  max-width: 411.08px;
+  height: 797.44px;
+  margin: 0 auto;
+  border-style: none;
+  border-color: inherit;
+  border-width: 0px;
+  -webkit-transform: scale(1);
+  -webkit-transform-origin: 0 0;
+  display: block;
+}
+
+@keyframes background-motion {
+  0% {
+    background-color: #000;
+  }
+  25% {
+    background-color: #0c0c0c;
+  }
+  50% {
+    background-color: #000;
+  }
+  75% {
+    background-color: #0c0c0c;
+    visibility: visible;
+    opacity: 100;
+  }
+  100% {
+    background-color: #000;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes apple-icon {
+  0% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.05);
+    opacity: 100;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.loading-bar {
+  width: 207px;
+  height: 8.96px;
+  display: block;
+  top: 65%;
+  left: 103.5px;
+  position: absolute;
+  border-radius: 4.48px;
+  border: 2.24px solid white;
+  overflow: hidden;
+  animation: loading-bar-hide 4s both;
+}
+.loading-bar:before {
+  content: "";
+  display: block;
+  height: 8.96px;
+  background: white;
+  animation: loading-bar-motion 4s both;
+}
+
+@keyframes loading-bar-hide {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loading-bar-motion {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 25%;
+  }
+  75% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}

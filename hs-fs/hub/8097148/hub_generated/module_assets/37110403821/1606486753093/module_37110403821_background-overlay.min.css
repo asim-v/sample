@@ -1,0 +1,16 @@
+.widget-type-rich_text,
+.widget-type-linked_image,
+.widget-type-form {
+    position: relative;
+    z-index: 2
+}
+
+.bg-overlay .floating-image {
+    position: absolute
+}
+
+.bg-overlay__border {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}

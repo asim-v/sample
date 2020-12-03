@@ -1,0 +1,15 @@
+.icon-cards {
+    position: relative;
+    z-index: 2
+}
+
+.icon-cards__icon {
+    padding: 20px;
+    background: linear-gradient(225deg, #6979f8 0%, #3a4cd7 100%);
+    border-radius: 50%;
+    margin-bottom: 15px
+}
+
+.icon-cards__card {
+    margin-bottom: 40px
+}

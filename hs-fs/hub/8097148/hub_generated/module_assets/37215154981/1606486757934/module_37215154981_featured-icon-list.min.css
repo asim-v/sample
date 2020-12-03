@@ -1,0 +1,27 @@
+.featured-icon-list__text p {
+    margin-bottom: 0
+}
+
+.featured-icon-list>* {
+    word-break: break-word
+}
+
+.featured-icon-list {
+    position: relative;
+    z-index: 2;
+    border-radius: 8px
+}
+
+.featured-icon-list:before {
+    left: 60px
+}
+
+@media(max-width:992px) {
+    .featured-icon-list:before {
+        left: 40px
+    }
+}
+
+.featured-icon-list {
+    overflow: hidden
+}

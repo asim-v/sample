@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.qrstuff.com	TRUE	/	FALSE	1999999999	PHPSESSID	a18fbf97a436707d4ff44e77a806ea14
+www.qrstuff.com	TRUE	/	FALSE	1999999999	cc_na	1
+

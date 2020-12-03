@@ -1,0 +1,171 @@
+.hotspots-image {
+    position: relative;
+    z-index: 5;
+    overflow: hidden
+}
+
+.hotspots-image__container .hotspot {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    z-index: 1
+}
+
+.hotspots-image__container img {
+    position: relative;
+    z-index: 1
+}
+
+.hotspots-image__container .hotspot__button {
+    height: 38px;
+    width: 38px;
+    padding: 0px;
+    border-radius: 100%;
+    border: 1px solid;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    cursor: pointer;
+    animation: button-pulse 3s ease-in-out infinite
+}
+
+.hotspots-image__container .hotspot__button:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    content: "";
+    display: block;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    transition: border-color 1s linear
+}
+
+@media(max-width:765px) {
+    .hotspots-image__container .hotspot__button {
+        height: 19px;
+        width: 19px
+    }
+    .hotspots-image__container .hotspot__button:after {
+        height: 7.5px;
+        width: 7.5px
+    }
+}
+
+.hotspot__label {
+    position: absolute;
+    padding: 0 0 1.1em 0;
+    width: 18em;
+    max-width: 50vw;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 14.5px;
+    padding: 30px;
+    line-height: 1.45em;
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s
+}
+
+.hotspot__label.top {
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%)
+}
+
+.hotspot__label.bottom {
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%)
+}
+
+.hotspot__label.right {
+    left: 100%;
+    top: 100%;
+    transform: translateY(-50%)
+}
+
+.hotspot__label.left {
+    right: 100%;
+    top: 100%;
+    transform: translateY(-50%)
+}
+
+.hotspot__label .hs_cos_wrapper_type_inline_rich_text>* {
+    margin-bottom: 10px
+}
+
+.hotspot__label:before {
+    content: "×";
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    top: -12px;
+    right: -2px;
+    background: linear-gradient(45.27deg, #4051db 0%, #6e50e4 101.91%);
+    border-radius: 50%;
+    color: #fff;
+    height: 36px;
+    width: 36px;
+    font-size: 27px;
+    line-height: 1rem;
+    pointer-events: all;
+    cursor: pointer
+}
+
+.hotspots-image__container .hotspot--selected {
+    z-index: 999
+}
+
+.hotspot--selected .hotspot__label {
+    opacity: 1;
+    pointer-events: all;
+    user-select: all;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: .3s;
+    animation-name: animatetop;
+    animation-duration: .3s
+}
+
+@keyframes button-pulse {
+    0% {
+        transform: scale(1, 1);
+        opacity: 1
+    }
+    40% {
+        transform: scale(1.15, 1.15);
+        opacity: 1
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}

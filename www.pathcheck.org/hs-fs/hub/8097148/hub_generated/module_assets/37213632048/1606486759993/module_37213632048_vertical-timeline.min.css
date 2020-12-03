@@ -1,0 +1,37 @@
+.vertical-timeline {
+    position: relative;
+    z-index: 2;
+    overflow: hidden
+}
+
+.vertical-timeline .container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 2px;
+    background: transparent;
+    border: 1px dashed #a0afc6;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.vertical-timeline-bullet {
+    background: linear-gradient(225deg, #6979f8 0%, #3a4cd7 100%);
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    border-radius: 50%;
+    left: 49%;
+    top: 10px
+}
+
+@media(max-width:765px) {
+    .vertical-timeline .container:before,
+    .vertical-timeline-bullet {
+        left: 0
+    }
+}

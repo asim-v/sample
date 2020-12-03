@@ -1,0 +1,30 @@
+.social-links {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.social-links__icon {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex !important;
+    margin: 0 .5rem 0;
+    transition: all .3s
+}
+
+.social-links__icon svg {
+    fill: #FFF;
+    height: 15px;
+    width: 15px
+}
+
+.social-links__icon:hover svg,
+.social-links__icon:focus svg,
+.social-links__icon:active svg {
+    fill: #FFF
+}
